@@ -176,23 +176,23 @@ class DefaultLog : public LogInterface {
         break;
     }
 #elif TD_TIZEN
-    switch (log_level) {
-      case VERBOSITY_NAME(FATAL):
-        dlog_print(DLOG_ERROR, DLOG_TAG, slice.c_str());
-        break;
-      case VERBOSITY_NAME(ERROR):
-        dlog_print(DLOG_ERROR, DLOG_TAG, slice.c_str());
-        break;
-      case VERBOSITY_NAME(WARNING):
-        dlog_print(DLOG_WARN, DLOG_TAG, slice.c_str());
-        break;
-      case VERBOSITY_NAME(INFO):
-        dlog_print(DLOG_INFO, DLOG_TAG, slice.c_str());
-        break;
-      default:
-        dlog_print(DLOG_DEBUG, DLOG_TAG, slice.c_str());
-        break;
-    }
+//    switch (log_level) {
+//      case VERBOSITY_NAME(FATAL):
+//        dlog_print(DLOG_ERROR, DLOG_TAG, slice.c_str());
+//        break;
+//      case VERBOSITY_NAME(ERROR):
+//        dlog_print(DLOG_ERROR, DLOG_TAG, slice.c_str());
+//        break;
+//      case VERBOSITY_NAME(WARNING):
+//        dlog_print(DLOG_WARN, DLOG_TAG, slice.c_str());
+//        break;
+//      case VERBOSITY_NAME(INFO):
+//        dlog_print(DLOG_INFO, DLOG_TAG, slice.c_str());
+//        break;
+//      default:
+//        dlog_print(DLOG_DEBUG, DLOG_TAG, slice.c_str());
+//        break;
+//    }
 #elif TD_EMSCRIPTEN
     switch (log_level) {
       case VERBOSITY_NAME(FATAL):
